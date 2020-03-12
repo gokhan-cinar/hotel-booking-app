@@ -11,7 +11,8 @@ module.exports = {
     parser: 'babel-eslint'
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'nuxt/no-cjs-in-config': 'off',
+    'vue/no-v-html': 0,
+    'no-console': 0
   }
 }

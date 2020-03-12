@@ -1,0 +1,21 @@
+{
+  "hotel_booking": "Hotel Booking",
+  "previous": "Previous",
+  "next": "Next",
+  "back": "Back",
+  "done": "Done",
+  "date": "Date",
+  "room": "Room",
+  "payment": "Payment",
+  "checkin": "Check-in Date",
+  "checkout": "Check-out Date",
+  "pick_a_day": "Pick a day",
+  "room_type":"Room Type",
+  "standard_room": "Standard",
+  "deluxe_room": "Deluxe",
+  "suit_room": "Suit",
+  "landscape": "Landscape selection",
+  "sea": "Sea",
+  "overland": "Overland",
+  "success_msg": "Reservation successful"
+}

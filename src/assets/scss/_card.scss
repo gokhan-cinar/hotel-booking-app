@@ -1,0 +1,113 @@
+
+$background: #00adad;
+$height: 250px;
+$width: floor($height * 1.7);
+$radius: 10px;
+
+.card {
+  position: relative;
+  display: inline-block;
+  padding: 2em 0;
+  .card__front {
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    background: #af8d12;;
+    background-size: cover;
+    position: relative;
+    z-index: 99;
+
+    input {
+      border: 1px solid white;
+      background: transparent;
+      padding: 10px;
+      margin-left: 7%;
+      color: #fff;
+      border-radius: 5px;
+    }
+    ::-webkit-input-placeholder {
+      color: #4c4c4c;
+    }
+
+    :-moz-placeholder {
+      color: #4c4c4c;
+    }
+
+    &--bank-name {
+      position: absolute;
+      top: 5%;
+      width: 63%;
+    }
+
+    &--card-num {
+      position: absolute;
+      width: 100%;
+      top: 7em;
+      margin-left: 26px;
+
+      input {
+        width: 63%;
+        margin: 5px;
+        color: #fff;
+      }
+    }
+
+    .holder-name {
+      position: absolute;
+      left: 0;
+      top: floor($height - 80px);
+    }
+
+    .exp-date {
+      position: absolute;
+      left: 52%;
+      top: floor($height - 80px);
+
+      input {
+        width: 20px;
+        margin: 0 5px;
+
+      }
+    }
+
+    .sign {
+      position: absolute;
+      top: 80px;
+      right: 5%;
+      width: 30px;
+      height: 30px;
+      background: url('http://www.clker.com/cliparts/6/e/2/s/6/V/plainwifiright.svg');
+      background-size: cover;
+    }
+  }
+
+  .card__back {
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    background: #775E00;
+    position: relative;
+    z-index: 2;
+    margin-top: -50%;
+    left: 30%;
+
+    &--magnet {
+      position: relative;
+      width: 100%;
+      background: #ccc;
+      height: 60px;
+      top: 20%;
+    }
+
+    input {
+      position: absolute;
+      top: 60%;
+      right: 10%;
+      border: none;
+      border: 2px solid white;
+      background: #ccc;
+      padding: 5px;
+      width: 50px;
+    }
+  }
+}

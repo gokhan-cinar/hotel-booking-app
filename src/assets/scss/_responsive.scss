@@ -1,0 +1,52 @@
+@media only screen and (max-width: 680px) {
+  .booking__banner {
+    &--text {
+      font-size: 4vw;
+    }
+  }
+  .el-col {
+    width: 100% !important;
+  }
+  .booking__content {
+    padding: 1.4em 1em;
+
+    .stepper {
+      padding: 0 0 1.5em;
+
+      ul {
+        display: flex !important;
+        justify-content: space-around;
+        border: none !important;
+
+        li {
+          padding: .2em 0;
+        }
+
+        .active {
+          border-bottom: 1px solid;
+          text-align: center;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .date__content {
+      text-align: center;
+
+      &--buttons {
+        display: block;
+
+        .go--book {
+          margin: 1em 1em 0 0;
+          display: inline-flex;
+        }
+      }
+    }
+  }
+  .room__content {
+    text-align: center;
+  }
+}

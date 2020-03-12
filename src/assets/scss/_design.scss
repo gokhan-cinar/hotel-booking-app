@@ -1,0 +1,278 @@
+@import "fonts";
+@import "variables";
+
+body {
+  background-color: #e2b8b8;
+  margin: 0;
+  @include poppins-font;
+}
+
+#app {
+  height: auto;
+  min-height: 100vh;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.language {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em 0;
+
+  &--link {
+    color: #fff;
+    font-size: 14px;
+    @include poppins-font;
+    border: 1px solid #fff;
+    border-radius: 0;
+    margin: 0 5px 0 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &--link:last-child {
+    margin: 0;
+  }
+}
+
+.booking {
+  width: 100%;
+  position: relative;
+
+  &__banner {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background: url("../images/booking-banner.jpg") no-repeat center;
+
+    &--img {
+      max-width: 100%;
+      vertical-align: middle;
+    }
+
+    &--text {
+      font-size: 30px;
+      font-weight: 400;
+      @include bitter-font;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: 9px 23px;
+      margin: 0;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__content {
+    color: #fff;
+    @include poppins-font;
+    background-color: $color-blue;
+    padding: 2em 1em;
+
+    .stepper {
+      display: block;
+
+      ul {
+        list-style-type: none;
+        display: block;
+        margin: 0;
+        padding: 0 0 0 1em;
+        border-left: 3px solid rgba(242, 242, 242, 0.4);
+        position: relative;
+
+        li {
+          color: #fff;
+          padding: .5em 0;
+          width: 100px;
+          cursor: pointer;
+        }
+      }
+
+      &--link {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        position: relative;
+
+        &.active {
+          color: #edc948;
+
+          &::after {
+            content: '';
+            background-color: #edc948;
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            left: -19px;
+            top: 0;
+          }
+        }
+      }
+    }
+
+    .date__content {
+
+      display: block;
+
+      &--block {
+        margin-bottom: 1em;
+
+        > span {
+          width: 150px;
+          display: inline-flex;
+        }
+      }
+
+      &--buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .el-input__inner {
+        background-color: transparent;
+        color: #fff;
+      }
+    }
+
+    .room__content {
+      article {
+        margin-bottom: 1em;
+      }
+
+      &--title {
+        display: block;
+        padding: 0 1em .5em 0;
+      }
+
+      .el-radio__input.is-checked + .el-radio__label {
+        color: #fff;
+      }
+
+      .el-radio__input.is-checked .el-radio__inner {
+        border-color: #d8d8d8;
+        background: #d4b43f;
+      }
+    }
+  }
+}
+
+.booking__info {
+  display: block;
+  padding: 1em;
+  margin: 0 0 2em;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: max-content;
+
+  &--text {
+    display: flex;
+    font-weight: 100;
+
+    small {
+      font-size: 15px;
+      font-weight: 500;
+      width: 181px;
+    }
+  }
+}
+
+.success__content {
+  text-align: center;
+}
+
+.go--book {
+  background: #d4b43f;
+  transition: all ease .3s;
+  display: block;
+  margin-left: auto;
+  color: #fff;
+}
+
+.payment__content {
+  .el-form--inline {
+    .el-form-item {
+      text-align: left;
+      width: 46%;
+
+      &__content {
+        width: 100%;
+
+        .el-input__inner {
+          background-color: transparent;
+          color: #fff;
+        }
+
+        ::-webkit-input-placeholder {
+          color: #4c4c4c;
+        }
+
+        :-moz-placeholder {
+          color: #4c4c4c;
+        }
+      }
+
+      .expiration {
+        width: 25%;
+        margin-right: 0.5em;
+      }
+
+      &__label {
+        display: block;
+        text-align: left;
+        color: #fff;
+      }
+    }
+
+  }
+
+}
+
+//effect
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
