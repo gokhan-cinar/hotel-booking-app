@@ -95,20 +95,20 @@
             <div class="payment__content fade-in">
               <InfoBooking :stepper="currentStep"/>
               <el-form :inline="true">
-                <el-form-item label="Name">
+                <el-form-item :label="$t('name')">
                   <el-input v-model="cardFormNameFormField" placeholder="John Wick"></el-input>
                 </el-form-item>
-                <el-form-item label="Card Number">
+                <el-form-item :label="$t('card_number')">
                   <el-input v-model="cardNumberFormField" maxlength="16" pattern="[0-9]{16}"
                             placeholder="1111999944447777"></el-input>
                 </el-form-item>
-                <el-form-item label="Security Code">
+                <el-form-item :label="$t('security_code')">
                   <el-input v-model="securityFormField" maxlength="4" pattern="[0-9]{4}" placeholder="435"></el-input>
                 </el-form-item>
-                <el-form-item label="CVC">
+                <el-form-item :label="$t('cvc')">
                   <el-input v-model="cvcFormField" maxlength="3" pattern="[0-9]{3}" placeholder="491"></el-input>
                 </el-form-item>
-                <el-form-item label="Expiration (mm/yy)">
+                <el-form-item :label="$t('expiration')">
                   <el-input class="expiration" v-model="expirationMmFormField" maxlength="2" pattern="[0-9]{2}"
                             placeholder="18"></el-input>
                   <el-input class="expiration" v-model="expirationYyFormField" maxlength="2" pattern="[0-9]{2}"

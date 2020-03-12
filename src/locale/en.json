@@ -17,5 +17,10 @@
   "landscape": "Landscape selection",
   "sea": "Sea",
   "overland": "Overland",
-  "success_msg": "Reservation successful"
+  "success_msg": "Reservation successful",
+  "card_number": "Card Number",
+  "name": "Name",
+  "security_code": "Security Code",
+  "expiration": "Expiration (mm/yy)",
+  "cvc": "CVC"
 }
