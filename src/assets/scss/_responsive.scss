@@ -38,7 +38,7 @@
 
       &--buttons {
         display: block;
-
+        text-align: center;
         .go--book {
           margin: 1em 1em 0 0;
           display: inline-flex;
@@ -48,5 +48,21 @@
   }
   .room__content {
     text-align: center;
+  }
+  .booking__info {
+    width: auto;
+  }
+  .card {
+    &__back {
+      width: 310px !important;
+      height: 220px !important;
+      margin-top: -63% !important;
+      left: 34% !important;
+    }
+
+    &__front {
+      height: 220px !important;
+      width: 310px !important;
+    }
   }
 }
