@@ -26,7 +26,15 @@
     export default {
         name: 'InfoBooking',
         props: {
-            stepper: '' // eslint-disable-line
+            stepper: {
+                type: Number
+            },
+            roomType: {
+                type: null,
+            },
+            landscapeType: {
+                type: null
+            }
         },
         filters: {
             dateFormat(val) {
@@ -41,31 +49,27 @@
             checkOutDateContent() {
                 return this.checkOutDateFormField = localStorage.checkOutDateFormField; // eslint-disable-line
             },
-            roomTypeContent() {
-                return this.roomTypeInputFormField = localStorage.roomTypeInputFormField; // eslint-disable-line
-            },
-            landscapeContent() {
-                return this.landscapeInputFormField = localStorage.landscapeInputFormField; // eslint-disable-line
-            },
-            roomTypeText() { // eslint-disable-line
-                if (this.roomTypeContent === '1') {
+            roomTypeText() {
+                if (this.roomType === '1') {
                     return this.$t("standard_room")
                 }
-                if (this.roomTypeContent === '2') {
+                if (this.roomType === '2') {
                     return this.$t("deluxe_room")
                 }
-                if (this.roomTypeContent === '3') {
+                if (this.roomType === '3') {
                     return this.$t("suit_room")
                 }
+                return '-'
             },
-            landscapeText() { // eslint-disable-line
-                if (this.landscapeContent === '1') {
+            landscapeText() {
+                if (this.landscapeType === '1') {
                     return this.$t("sea")
                 }
-                if (this.landscapeContent === '2') {
+                if (this.landscapeType === '2') {
                     return this.$t("overland")
                 }
+                return '-'
             }
-        }
+        },
     }
 </script>

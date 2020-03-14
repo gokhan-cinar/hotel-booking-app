@@ -93,7 +93,10 @@
           </template>
           <template v-if="currentStep === 3">
             <div class="payment__content fade-in">
-              <InfoBooking :stepper="currentStep"/>
+              <InfoBooking
+                      :room-type="roomTypeInputFormField"
+                      :landscape-type="landscapeInputFormField"
+                      :stepper="currentStep"/>
               <el-form :inline="true">
                 <el-form-item :label="$t('name')">
                   <el-input v-model="cardFormNameFormField" placeholder="John Wick"></el-input>
@@ -261,6 +264,6 @@ export default {
               this.expirationYyFormField &&
               this.cvcFormField
     }
-  }
+  },
 }
 </script>
