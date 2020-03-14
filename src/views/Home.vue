@@ -9,18 +9,29 @@
           <div class="stepper">
             <ul>
               <li>
-                <el-button class="stepper--link" :class="{'active': currentStep === 1}" @click.prevent="goToStep(1)">1.
-                  {{$t('date')}}
+                <el-button
+                        class="stepper--link"
+                        :class="{'active': currentStep === 1}"
+                        @click.prevent="goToStep(1)">
+                  1. {{$t('date')}}
                 </el-button>
               </li>
               <li>
-                <el-button class="stepper--link" :class="{'active': currentStep === 2}" @click.prevent="goToStep(2)">2.
-                  {{$t('room')}}
+                <el-button
+                        class="stepper--link"
+                        :class="{'active': currentStep === 2}"
+                        :disabled="!checkOutDateFormField || !checkInDateFormField"
+                        @click.prevent="goToStep(2)">
+                  2. {{$t('room')}}
                 </el-button>
               </li>
               <li>
-                <el-button class="stepper--link" :class="{'active': currentStep === 3}" @click.prevent="goToStep(3)">3.
-                  {{$t('payment')}}
+                <el-button
+                        class="stepper--link"
+                        :class="{'active': currentStep === 3}"
+                        :disabled="!isFormValid"
+                        @click.prevent="goToStep(3)">
+                  3. {{$t('payment')}}
                 </el-button>
               </li>
             </ul>
@@ -140,16 +151,14 @@
                 <el-button
                         class="go--book"
                         @click.prevent="goToStep(2)"
-                        round
-                >
+                        round>
                   {{$t('back')}}
                 </el-button>
                 <el-button
                         class="go--book"
                         @click.prevent="goToStep(4)"
                         :disabled="!isFormValid"
-                        round
-                >
+                        round>
                   {{$t('payment')}}
                 </el-button>
               </div>
@@ -172,7 +181,6 @@
         </el-col>
       </el-row>
     </div>
-
   </div>
 </template>
 
@@ -180,8 +188,7 @@
   import fromUnixTime from 'date-fns/fromUnixTime'
   import InfoBooking from '../components/InfoBooking'
 
-
-export default {
+  export default {
   name: 'Home',
   components: {
     InfoBooking,
